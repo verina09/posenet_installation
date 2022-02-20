@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Art Installation</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js" integrity="sha512-NLtnLBS9Q2w7GKK9rKxdtgL7rA7CAS85uC/0xd9im4J/yOL4F9ZVlv634NAM7run8hz3wI2GabaA6vv8vJtHiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+
+<style>
+ /* body {
+  background-color: #ffffff;
+} */
+
+.mainDiv {
+    /*justify-content: center;
+    align-items: center;*/
+    z-index:10;
+    position: absolute;
+    height: 100px;
+    width: 20%;
+    /*float: right;*/
+    top: 0;
+    right: 0;
+}
+
+.threeDiv {
+  /*margin:-300px 0 0 80px;*/
+  /*z-index:10;*/
+  z-index:0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+h3 {
+  color: #EFF6EE;
+  font-family: interstate, sans-serif;
+  font-weight: 250;
+  font-style: normal;
+}
+</style>
+</head>
+
+<body>
+
+<div id="info">
+</div>
+
+
+<div id='main' class='mainDiv'>
+    <video id="video" playsinline style=" -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    display: none;
+    ">
+    </video>
+    <canvas id="output" />
+</div>
+<div id='threeContainer' class='threeDiv' style=""> </div>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/three-orbitcontrols@2.110.3/OrbitControls.js"></script> -->
+<!-- <script src="OrbitControls.js"></script> -->
+
+<script src="//mrdoob.github.io/stats.js/build/stats.min.js"></script>
+<script src="sketch_3dmodel.js"></script>
+</body>
+
+</html>
